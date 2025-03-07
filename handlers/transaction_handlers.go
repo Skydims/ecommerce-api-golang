@@ -13,7 +13,7 @@ func Checkout(w http.ResponseWriter, r *http.Request) {
 	database.DB.Preload("Product").Find(&cartItems)
 
 	if len(cartItems) == 0 {
-		http.Error(w, "Cart is empty", http.StatusBadRequest)
+		http.Error(w, "keranjang kosong", http.StatusBadRequest)
 		return
 	}
 
