@@ -16,6 +16,8 @@ func main() {
 
 	r := mux.NewRouter()
 	routes.RegisterProductRoutes(r)
+	routes.RegisterCartRoutes(r)
+	routes.RegisterTransactionRoutes(r)
 
 	log.Println("Server running on port 8080")
 	http.ListenAndServe(":8080", r)
