@@ -14,11 +14,12 @@ func InitDB() {
 	var err error
 	DB, err = gorm.Open(sqlite.Open("ecommerce.db"), &gorm.Config{})
 	if err != nil {
-		log.Fatal("gagal connect ke database")
+		log.Fatal("Failed to connect to database")
 	}
 
 	// Auto migrate model Produk
-	DB.AutoMigrate(&models.Product{}, &models.CartItem{}, &models.Transaction{}, &models.TransactionItem{})
+	DB.AutoMigrate(&models.Product{}, &models.CartItem{}, &models.Transaction{}, &models.TransactionItem{}, &models.User{})
+
 
 
 }
