@@ -8,3 +8,5 @@ go get -u gorm.io/driver/sqlite
 
 
 lalu tinggal jalankan dengan, go run main.go
+
+atau bisa go mod tidy untuk mendownload depensial 
